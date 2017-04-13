@@ -13,8 +13,8 @@ app.get('/:firstname/:lastname', function(request, response){
 app.get('/jedi/:firstname/:lastname', function(request, response){
 	var first = request.params.firstname.slice(0,2);
 	var last = request.params.lastname.slice(0,3);
-	var jediName = first + last;
-	response.send(["Hello", jediName].join(" "));
+	var jediName = last + first;
+	response.send(["Hello your Jedi Name is:", jediName].join(" "));
 });
 
 
